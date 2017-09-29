@@ -10,31 +10,62 @@
 			this.menu = new Menu({
 				el: el.querySelector('.js-menu'),
 				data: {
-					title: 'Сайты',
+					title: 'List',
 					items: []
 				}
 			});
 
 			this.menu.setData({
-				title: 'Сайты',
+				title: 'List',
 				items: [
-					{title: 'Первый'},
 					{
-						title: 'Второй',
+						title: 'Item One',
+						className: 'profile'
+					},
+					{
+						title: 'Item Two',
+						className: 'messages',
 						items: [
-							{title: 'Второй-первый'},  
+                            {   
+                                title: 'Item Two-One',
+                                className: 'item'
+                            },  
 							{
-								title: 'Второй-второй',
+                                title: 'Item Two-Two',
+                                className: 'item',
 								items: [
-									{title: 'Второй-второй-1'},
-									{title: 'Второй-второй-2'},
-									{title: 'Второй-второй-3'}
+                                    {
+                                        title: 'Item Two-Two-1',
+                                        className: 'item'
+                                     },
+									{
+                                        title: 'Item Two-Two-2',
+                                        className: 'item'
+                                    },
+									{
+                                        title: 'Item Two-Two-3',
+                                        className: 'item'
+                                    }
 								]
 							},  
 						]
 					},
-					{title: 'Третий'},
-					{title: 'Четвертый'}
+					{
+						title: 'Item Three',
+						className: 'settings'
+					},
+					{
+						title: 'Item Four',
+						className: 'logout'
+                    },
+                    {
+						title: 'Item Five',
+						className: 'western'
+                    },
+                    {
+						title: 'Item Six',
+						className: 'fantasy'
+					}
 				]
 			});
 

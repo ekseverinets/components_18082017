@@ -25,32 +25,36 @@
 
 		renderItems(items, container) {
 			items.forEach(item => {
-				this._addItem(item, container); // пусть _addItem работает только с одним элментом
+				this._addItem(item, container);
 			});
 		}
       
 		initEvents() {
-			this.$title.addEventListener('click', this.toggleDisplayMenu.bind(this));
+			//this.$title.addEventListener('click', this.toggleDisplayMenu.bind(this));
 		}
-        
-		toggleDisplayMenu() {
-			this.$el.classList.toggle('_open');
-		}
+
+		// toggleDisplayMenu() {
+		// 	this.$el.classList.toggle('_open');
+		// }
         
 		_addItem(item, container) {
 			let itemText = item.title,
 				ulEl = document.createElement('ul'),
 				liEl = document.createElement('li');
-              
+			
+			liEl.classList.add(item.className); 
+
 			liEl.textContent = itemText;
-               
-			if (item.items) { // а здесь нужно рекурсивно вызвать renderItems,
+             
+			if (item.items) {
 				liEl.append(ulEl);
-				this.renderItems(item.items, ulEl); // указываем, что рендерим и куда
+				ulEl.classList.add('submenu');
+				this.renderItems(item.items, ulEl);
 			} 
       
 			container.append(liEl);
 		}
+
 	}
       
 	window.Menu = Menu;
