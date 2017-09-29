@@ -3,6 +3,7 @@
 
 	// import
 	const Menu = window.Menu;
+	const Form = window.Form;
 
 	class App {
 		constructor ({el}) {
@@ -13,6 +14,10 @@
 					title: 'List',
 					items: []
 				}
+			});
+            
+			this.form = new Form({
+				el: el.querySelector('.form')
 			});
 
 			this.menu.setData({
@@ -26,26 +31,26 @@
 						title: 'Item Two',
 						className: 'messages',
 						items: [
-                            {   
-                                title: 'Item Two-One',
-                                className: 'item'
-                            },  
+							{   
+								title: 'Item Two-One',
+								className: 'item'
+							},  
 							{
-                                title: 'Item Two-Two',
-                                className: 'item',
+								title: 'Item Two-Two',
+								className: 'item',
 								items: [
-                                    {
-                                        title: 'Item Two-Two-1',
-                                        className: 'item'
-                                     },
 									{
-                                        title: 'Item Two-Two-2',
-                                        className: 'item'
-                                    },
+										title: 'Item Two-Two-1',
+										className: 'item'
+									},
 									{
-                                        title: 'Item Two-Two-3',
-                                        className: 'item'
-                                    }
+										title: 'Item Two-Two-2',
+										className: 'item'
+									},
+									{
+										title: 'Item Two-Two-3',
+										className: 'item'
+									}
 								]
 							},  
 						]
@@ -57,12 +62,12 @@
 					{
 						title: 'Item Four',
 						className: 'logout'
-                    },
-                    {
+					},
+					{
 						title: 'Item Five',
 						className: 'western'
-                    },
-                    {
+					},
+					{
 						title: 'Item Six',
 						className: 'fantasy'
 					}

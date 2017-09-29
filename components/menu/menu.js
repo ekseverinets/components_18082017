@@ -5,12 +5,10 @@
 		constructor({el, data}) {
 			this.$el = el;
 			this.data = data;
+			this.$title = el.querySelector('.js-title');
+			this.$menuList = el.querySelector('.js-menu-list');
 
-			this.$el          = el;
-			this.$title       = el.querySelector('.js-title');
-			this.$menuList    = el.querySelector('.js-menu-list');
-
-			this.initEvents();
+			// this.initEvents();
 		}
 
 		setData (data) {
@@ -29,9 +27,9 @@
 			});
 		}
       
-		initEvents() {
-			//this.$title.addEventListener('click', this.toggleDisplayMenu.bind(this));
-		}
+		// initEvents() {
+		// 	this.$title.addEventListener('click', this.toggleDisplayMenu.bind(this));
+		// }
 
 		// toggleDisplayMenu() {
 		// 	this.$el.classList.toggle('_open');
